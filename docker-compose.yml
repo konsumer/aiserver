@@ -1,12 +1,12 @@
 services:
-  test:
+  images:
     build:
       context: .
       dockerfile: Fooocus.Dockerfile
     ports:
       - "7865:7865"
     volumes:
-      - "checkpoints:/fooocus/models/checkpoints/"
+      - "./checkpoints/:/fooocus/models/checkpoints/"
     deploy:
       resources:
         reservations:
