@@ -5,8 +5,6 @@ This is my combo AI server, designed to make it easy to chat/get images on your 
 You will need an nvidia GPU on host. You can definitely do this stuff with other GPUs, but this is what I have, so it's setup like this. You will also need docker installed. On linux, setup nvidia driver, and do this:
 
 ```
-# install host stuff
-
 sudo apt-get update && sudo apt-get install -y docker-compose nvidia-container-toolkit
 sudo systemctl restart docker
 
@@ -43,3 +41,5 @@ Wed Jan 17 07:26:12 2024
 ```
 docker-compose up
 ```
+
+It takes a while to download all the checkpoints, on first run, but it caches them in `checkpoints/`, which you can reuse between servers.
